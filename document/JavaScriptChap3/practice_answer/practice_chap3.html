@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- ヘッド要素 -->
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="./practice_chap3.js"></script>
+</head>
+<body>
+	<!-- ボディ要素 -->
+○サンプル1(現在の日付をテキストボックスに入れる)<br>
+<input type="text" name="nowText" id="nowText">
+<button id="sample1button">現在の日付を入れる</button>
+<hr>
+○サンプル2(cssを動的に変える:テキストの色の入れ替え＆画像回転)
+<div id="blueOrRedText">青と赤の入れ替え</div>
+<img id="jsImg" src="./javascript_logo.jpg" width="150px"><br>
+<button id="sample2button">色の入れ替え＆画像回転</button>
+<hr>
+○サンプル3(HTML要素の表示、非表示を切り替える)
+<ul>
+	<li>
+		趣味は何ですか？
+		<select name="hobby" id="sample3select">
+			<option value="0">--</option>
+			<option value="1">トライアスロン</option>
+			<option value="2">その他</option>
+		</select>
+	</li>
+</ul>
+<div id="triathlon">
+	<!-- トライアスロンの場合 -->
+	それでは好きな種目は？
+	<input type="radio" name="favorite" value="swim">Swim
+	<input type="radio" name="favorite" value="bike">Bike
+	<input type="radio" name="favorite" value="run">Run
+</div>
+<div id="other">
+	<!-- その他の場合 -->
+	それでは何が好き？
+	<input type="text" name="favorite">
+</div>
+<hr>
+○サンプル4(フォーム送信ボタンを押した時、送信前に入力内容をチェックする)
+<form name="sample4Form" action="#" id="sample4Form">
+	<ul>
+		<li>
+			名前：<input type="text" name="name" id="name">
+		</li>
+	</ul>
+	<!-- typeがsubmitでないことに注意 -->
+	<input type="button" value="入力値チェック" id="sample4Button">
+</form>
+<hr>
+○サンプル5 (ダブルサブミット対策:1度押したら2度目を押せなくする)
+<form action="#">
+	<ul>
+		<li>
+			名前：<input type="text" name="name">
+		</li>
+	</ul>
+	<!-- typeがsubmitでないことに注意 -->
+	<input type="button" value="送信" id="sample5Button">
+</form>
+<hr>
+○サンプル6 (ダミーフォームを作りボタンを横に並べる)<br>
+ダミーフォームを使わない例(ボタンを横に並べられない)
+<form action="#" method="post">
+名前：<input type="text" name="name"><br>
+記事：<textarea rows="5" cols="20" name="article"></textarea><br>
+<input type="submit" value="投稿">
+</form>
+<form action="#">
+<input type="submit" value="全て削除">
+</form>
+ダミーフォームを使った例(ボタンを横に並べられる)
+<form action="#" method="post" id="sample6Form">
+名前：<input type="text" name="name"><br>
+記事：<textarea rows="5" cols="20" name="article"></textarea><br>
+<input type="submit" value="投稿">
+<input type="button" value="全て削除" id="sample6Button">
+</form>
+<form action="#" name="sample6Form">
+<!-- ダミーフォーム -->
+</form>
+</body>
+</html>

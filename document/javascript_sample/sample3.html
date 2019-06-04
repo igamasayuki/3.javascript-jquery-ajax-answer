@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- ヘッド要素 -->
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+	<script>
+		// オブジェクト
+		// オブジェクト生成
+		var beetle = new Object();
+		// プロパティ決定および代入
+		beetle.speed = 40;
+		beetle.bodyColor = "yellow";
+		beetle.run = function(){return this.speed += 40;}
+		console.log(beetle);
+		beetle.run();
+		console.log(beetle);
+
+		// オブジェクト生成
+		var copen = new Object();
+		// プロパティ決定および代入
+		copen["speed"] = 60;
+		copen["bodyColor"] = "black";
+		console.log(copen);
+
+		// 配列
+		//var age2 = [23,46,51,30,19];
+		var ages = new Array(23,46,51,30,20);
+
+		console.log("配列の添え字２の要素は「" + ages[2] + "」です。");
+
+		for(var i=0;i<ages.length;i++){
+		  console.log(ages[i] + "歳");
+		}
+	</script>
+</head>
+<body>
+	<!-- ボディ要素 -->
+	<p>ページ開始</p>
+
+	<p>ページ終了</p>
+</body>
+</html>

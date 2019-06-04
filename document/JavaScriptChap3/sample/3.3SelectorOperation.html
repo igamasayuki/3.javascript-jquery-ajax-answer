@@ -1,0 +1,16 @@
+<html>
+<head>
+    <meta charset="utf-8">
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(function(){
+  alert("ready関数開始！"); //ポップアップで表示
+  $("#msg").css("font-size", "18px").css("color","red");
+  $("#msg").after("<img src='path/to/curry.jpg'>");
+});
+</script>
+</head>
+<body>
+<p id="msg">カレーいただきます</p>
+</body>
+</html>

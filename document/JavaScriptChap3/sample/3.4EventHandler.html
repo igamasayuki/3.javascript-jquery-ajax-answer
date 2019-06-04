@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="utf-8">
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(function(){
+  alert("ready関数開始！"); //ポップアップで表示
+  $("#textbox").val("初期値");
+
+  $("#btn_alert").on("click", function(){
+    alert( $("#textbox").val() );
+  });
+
+});
+</script>
+</head>
+<body>
+<input id="textbox" type="text" />
+<button id="btn_alert">アラート表示</button>
+</body>
+
+</html>

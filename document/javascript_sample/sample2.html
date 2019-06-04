@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- ヘッド要素 -->
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+	<script>
+	  // 変数宣言とスコープ
+	  // 変数宣言はvarを使用する
+		// 関数の外で宣言(グローバル変数)
+		globalVal = 10;
+		function func1(){
+			// 関数の中で宣言(ローカル変数)
+			var localVal = 20;
+			console.log("globalVal:" + globalVal); // 10
+			console.log("localVal:" + localVal); // 20
+		}
+		func1();
+		console.log("globalVal:" + globalVal); // 10
+		// console.log("localVal:" + localVal); // エラー
+
+		// varはブロックの外でも使用できてしまう
+		if (true) {
+		    var x = 5;
+		}
+		console.log(x); // 5と出力
+
+		// ブロック内でスコープを作りたい時はletを使用する
+		if (true) {
+		    let y = 5; // ブロック内で有効な変数になる
+		}
+		// console.log(y);  // エラー
+
+		const pai = 3.14;
+		console.log(pai);
+		// pai = 3; // エラー
+	</script>
+	<script src="./sample2.js"></script>
+</head>
+<body>
+	<!-- ボディ要素 -->
+	<p>ページ開始</p>
+	<button onclick="doClickEvent()">外部ファイルの関数呼び出し</button>
+	<p>ページ終了</p>
+</body>
+</html>
