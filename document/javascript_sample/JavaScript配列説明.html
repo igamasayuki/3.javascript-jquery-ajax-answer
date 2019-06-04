@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- ヘッド要素 -->
+</head>
+<body>
+<!--
+ 同じようなデータを一元管理したい時、変数をたくさん用意するのではなく、
+ 配列を使用する。
+
+ 配列とは変数が連なったもの。
+
+ □□□□ ←配列(変数が連なったもの)
+ ０１２３ ←添え字(0から始まる)
+
+-->
+<script>
+	//var age = [23,46,51,30,19];
+	var age = new Array(23,46,51,30,20);
+
+	document.write("配列の添え字２の要素は「" + age[2] + "」です。<br>");
+
+	for(var i=0;i<5;i++){
+		document.write(age[i] + "歳<br>");
+	}
+
+	document.write("現在配列は" + age.length + "個の要素を持っています。");
+</script>
+
+</body>
+</html>
