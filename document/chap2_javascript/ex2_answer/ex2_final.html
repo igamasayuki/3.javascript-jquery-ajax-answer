@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function plus(){
+	// 「input_break_time」というidが付いているdiv要素を取得
+	const break_time_element = document.getElementById("input_break_time");
+	
+	 //「break_time_element」要素の先頭にある子要素を複製（コピー）
+	 let clone = break_time_element.firstElementChild.cloneNode(true);
+
+	 //「break_time_element」要素の最後尾に複製した要素を追加
+	 break_time_element.appendChild(clone); 
+	 
+}
+
+function minus(minus_button){
+	// 「minus_button」要素の親の要素「div」を削除
+	minus_button.parentNode.remove();
+}
+</script>
+</head>
+<body>
+<h1>タイムカード入力画面</h1>
+出勤時間：<input type="text" name="work_start"><br>
+退勤時間：<input type="text" name="work_end"><br>
+休憩時間：
+<form action="#" method="post">
+<div id="input_break_time">
+	<div>
+	<input type="text" name="start">
+	〜
+	<input type="text" name="end">
+	<button type="button" onclick="plus()">+</button>
+	<button type="button" onclick="minus(this)">-</button>
+	</div>
+</div>
+<button>申請する</button>
+</form>
+</body>
+</html>
