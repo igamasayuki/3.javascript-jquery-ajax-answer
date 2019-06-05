@@ -89,8 +89,7 @@
 ・結果をコンソールに出力する
 
 ○問9 関数を変数に代入
-・printNameVariable変数を宣言し問8の自分の名前をコンソール
-　に出力する関数を代入する
+・printNameVariable変数を宣言し自分のニックネームをコンソールに出力する関数を代入する
 ・今定義したprintNameVariable変数に入っている関数を呼び出す
 
 ○問9-2(追加問題) 関数を変数に代入
@@ -150,11 +149,10 @@ console.log(x); // 5と出力
 ・以下のマニュアルを見たり検索するなどして問に答えてください
 　https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math
 
-・Mathオブジェクトのある関数を使用して2の3乗をコンソール
-　に出力する
+・Mathオブジェクトのある関数を使用して2の3乗をコンソールに出力する
 　※自分で計算するのではなく、用意されている関数を使用する
 
 ○全部終わった人は
 　2.4.9HtmlElementSample.html
 　2.4.9HtmlElementSample.js
-　を写経して動作確認してみてください。
+　を写して動作確認してみてください。

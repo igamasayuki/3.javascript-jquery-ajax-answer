@@ -135,7 +135,7 @@ console.log("5 / 3 = " + div(5,3));
 console.log("問9 解答");
 // printNameVariable(); //関数宣言の前だと使用不可能(巻き上げできないという)
 var printNameVariable = function() {
-	console.log("伊賀将之");
+	console.log("イガ");
 }
 printNameVariable();
 
