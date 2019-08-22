@@ -5,9 +5,10 @@
 <title>Insert title here</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript" ></script>
 <!-- スクリプト部分 -->
-<script type="text/javascript">
+<script>
 $( function() {    
-    $('#email') .keyup(
+    $('#email') .on(
+    		"keyup",
     	    function() {
     	        var hostUrl= 'http://localhost:8080/api/emailcheck';
     	        var inputEmail = $("#email").val();
@@ -19,6 +20,8 @@ $( function() {
     	            timeout:10000,
     	        }).done(function(data) {
  	        		//alert("ok");
+ 	        		console.log(data);
+ 	        		console.dir(JSON.stringify(data));
  	        		$("#duplicateMessage").html(data.duplicateMessage);
     	        }).fail(function(XMLHttpRequest, textStatus, errorThrown) {
     	            alert("error");
