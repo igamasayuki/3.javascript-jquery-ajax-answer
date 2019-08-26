@@ -60,7 +60,7 @@ $(function(){
   $("#sample6Button").on("click",function(){ //ボタン押下時
     alert("投稿ではなく削除のダミーフォームをサブミット！");
   	// sample6Formというidがつけられたフォームをサブミットする(サーバーへ送る)
-  	$("#sample6Form").submit();
+  	$("#sample6FormForDelete").submit();
   });
 
 }); // end ready

@@ -17,7 +17,7 @@
 <script>
 $(function() {
   // ［検索］ボタンクリックで検索開始
-  $('#search').click(function() {
+  $('#search').on("click",function() {
     $.ajax({
         url: "http://zipcoda.net/api",
         dataType: "jsonp",
