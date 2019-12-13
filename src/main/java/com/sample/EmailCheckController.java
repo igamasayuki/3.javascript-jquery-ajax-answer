@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class IndexController {
+public class EmailCheckController {
 
-	@RequestMapping("/")
+	@RequestMapping("/to_input_email")
 	public String index() {
-		return "input";
+		return "input_email";
 	}
 	
 }

@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<span id="text">ここのテキストが隠れたり現れたりします</span><br>
+<button id="show_btn">表示</button>
+<button id="hide_btn">非表示</button>
+
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+$(function() {
+  $("#show_btn").on("click", function(){
+    $("#text").show();
+  });
+  $("#hide_btn").on("click", function(){
+	    $("#text").show();
+  });
+});
+</script>
+</body>
+</html>
