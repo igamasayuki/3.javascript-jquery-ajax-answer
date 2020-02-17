@@ -11,13 +11,13 @@
 ○サンプル1(現在の日付をテキストボックスに入れる)<br>
 <form name="sample1Form">
 	<input type="text" name="nowText">
-	<input type="button" value="現在の日付を入れる" onclick="sample1();">
+	<button type="button" onclick="sample1();">現在の日付を入れる</button>
 </form>
 <hr>
 ○サンプル2(cssを動的に変える:テキストの色の入れ替え＆画像回転)
 <div id="blueOrRedText" style="color:blue">青と赤の入れ替え</div>
 <img id="jsImg" src="./javascript_logo.jpg" width="150px"><br>
-<input type="button" value="色の入れ替え＆画像回転" onclick="sample2();">
+<button type="button" onclick="sample2();">色の入れ替え＆画像回転</button>
 <hr>
 ○サンプル3(HTML要素の表示、非表示を切り替える)
 <form name="sample3Form">
@@ -53,7 +53,7 @@
 		</li>
 	</ul>
 	<!-- typeがsubmitでないことに注意 -->
-	<input type="button" value="入力値チェック" onclick="sample4();">
+	<button type="button" onclick="sample4();">入力値チェック</button>
 </form>
 <hr>
 ○サンプル5(ダブルサブミット対策:1度押したら2度目を押せなくする)
@@ -64,7 +64,7 @@
 		</li>
 	</ul>
 	<!-- typeがsubmitでないことに注意 -->
-	<input type="button" value="送信" onclick="sample5(this);">
+	<button type="button" onclick="sample5(this);">送信</button>
 </form>
 <hr>
 ○サンプル6(ダミーフォームを作りボタンを横に並べる)<br>
@@ -75,14 +75,14 @@
 <input type="submit" value="投稿">
 </form>
 <form action="#">
-<input type="submit" value="全て削除">
+<button type="submit">全て削除</button>
 </form>
 ダミーフォームを使った例(ボタンを横に並べられる)
 <form action="#" method="post">
 名前：<input type="text" name="name"><br>
 記事：<textarea rows="5" cols="20" name="article"></textarea><br>
-<input type="submit" value="投稿">
-<input type="button" value="全て削除" onclick="sample6();">
+<button type="submit">投稿</button>
+<button type="button" value="" onclick="sample6();">全て削除</button>
 </form>
 <form action="#" name="sample6Form">
 <!-- ダミーフォーム -->

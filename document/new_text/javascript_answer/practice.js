@@ -53,7 +53,7 @@ for(var i = 1; i <= 9; i++){
 			answer = " " + answer;
 		}
 		answerLine += answer + " ";
-		//process.stdout.write(i + j);
+		//process.stdout.write(i + j); // ←調べるとこれが出てきますがこれはnode.jsというライブラリ使用しないと使えないためNG
 	}
 	answerLine += "\n"// 改行
 }
