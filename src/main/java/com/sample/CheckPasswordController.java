@@ -3,16 +3,23 @@ package com.sample;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
-@RequestMapping(value = "/check_password_api")
-public class CheckPasswordApiController {
+@Controller
+@RequestMapping("/checkpassword")
+public class CheckPasswordController {
 
-	@RequestMapping(value = "/passwordcheck", method = RequestMethod.POST)
-	public Map<String, String> passwordcheck(String password, String confirmationPassword) {
+	@RequestMapping("")
+	public String index() {
+		return "input_password";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/check", method = RequestMethod.POST)
+	public Map<String, String> check(String password, String confirmationPassword) {
 		Map<String, String> map = new HashMap<>();
 
 		// 8文字以上チェック
@@ -38,5 +45,5 @@ public class CheckPasswordApiController {
 		
 		return map;
 	}
-
+	
 }

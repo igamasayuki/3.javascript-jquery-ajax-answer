@@ -3,16 +3,23 @@ package com.sample;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
-@RequestMapping(value = "/check_email_api")
-public class CheckEmailApiController {
+@Controller
+@RequestMapping("/checkemail")
+public class CheckEmailController {
 
-	@RequestMapping(value = "/emailcheck", method = RequestMethod.POST)
-	public Map<String, String> emailcheck(String email) {
+	@RequestMapping("")
+	public String index() {
+		return "input_email";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/check", method = RequestMethod.POST)
+	public Map<String, String> check(String email) {
 		Map<String, String> map = new HashMap<>();
 		String duplicateMessage = null;
 		if ("iga@sample.com".equals(email)) {
@@ -23,5 +30,4 @@ public class CheckEmailApiController {
 		map.put("duplicateMessage", duplicateMessage);
 		return map;
 	}
-	
 }

@@ -5,7 +5,7 @@ $(function() {
 	$("#nextStatusName").text("入金済");
 	
 	$("#update_status_btn").on("click", function() {
-		var hostUrl = "http://localhost:8080/update_status_api/updatestatus";
+		var hostUrl = "http://localhost:8080/updatestatus/update";
 		var previousStatusValue = $("#update_status_btn").val();
 		$.ajax({
 			url : hostUrl,

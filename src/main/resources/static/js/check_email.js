@@ -1,6 +1,6 @@
 $(function() {
 	$("#email").on("keyup", function() {
-		var hostUrl = "http://localhost:8080/check_email_api/emailcheck";
+		var hostUrl = "http://localhost:8080/checkemail/check";
 		var inputEmail = $("#email").val();
 		$.ajax({
 			url : hostUrl,

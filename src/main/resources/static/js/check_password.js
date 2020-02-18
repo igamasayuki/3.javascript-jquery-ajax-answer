@@ -8,7 +8,7 @@ $(function() {
 	});
 	
 	function check_password(){
-		var hostUrl = "http://localhost:8080/check_password_api/passwordcheck";
+		var hostUrl = "http://localhost:8080/checkpassword/check";
 		var inputPassword = $("#password").val();
 		var inputConfirmationPassword = $("#confirmationPassword").val();
 		$.ajax({
