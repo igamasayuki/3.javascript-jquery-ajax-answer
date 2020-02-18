@@ -1,20 +1,20 @@
 $(function() {
-	$('#password').on("keyup", function() {
+	$("#password").on("keyup", function() {
 		check_password();
 	});
 	
-	$('#confirmationPassword').on("keyup", function() {
+	$("#confirmationPassword").on("keyup", function() {
 		check_password();
 	});
 	
 	function check_password(){
-		var hostUrl = 'http://localhost:8080/check_password_api/passwordcheck';
+		var hostUrl = "http://localhost:8080/check_password_api/passwordcheck";
 		var inputPassword = $("#password").val();
 		var inputConfirmationPassword = $("#confirmationPassword").val();
 		$.ajax({
 			url : hostUrl,
-			type : 'POST',
-			dataType : 'json',
+			type : "POST",
+			dataType : "json",
 			data : {
 				password : inputPassword,
 				confirmationPassword : inputConfirmationPassword

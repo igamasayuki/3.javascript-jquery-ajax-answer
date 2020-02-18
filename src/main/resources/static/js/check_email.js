@@ -1,11 +1,11 @@
 $(function() {
-	$('#email').on("keyup", function() {
-		var hostUrl = 'http://localhost:8080/check_email_api/emailcheck';
+	$("#email").on("keyup", function() {
+		var hostUrl = "http://localhost:8080/check_email_api/emailcheck";
 		var inputEmail = $("#email").val();
 		$.ajax({
 			url : hostUrl,
-			type : 'POST',
-			dataType : 'json',
+			type : "POST",
+			dataType : "json",
 			data : {
 				email : inputEmail
 			},

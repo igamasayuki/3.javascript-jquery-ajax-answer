@@ -1,16 +1,16 @@
 $(function() {
 	// 初期表示時は「入金前:0」にする
-	$('#nowStatusName').text("入金前");
-	$('#update_status_btn').val(0);
+	$("#nowStatusName").text("入金前");
+	$("#update_status_btn").val(0);
 	$("#nextStatusName").text("入金済");
 	
-	$('#update_status_btn').on("click", function() {
-		var hostUrl = 'http://localhost:8080/update_status_api/updatestatus';
+	$("#update_status_btn").on("click", function() {
+		var hostUrl = "http://localhost:8080/update_status_api/updatestatus";
 		var previousStatusValue = $("#update_status_btn").val();
 		$.ajax({
 			url : hostUrl,
-			type : 'POST',
-			dataType : 'json',
+			type : "POST",
+			dataType : "json",
 			data : {
 				previousStatusValue : previousStatusValue
 			},
@@ -20,7 +20,7 @@ $(function() {
 			console.log(data);
 			console.dir(JSON.stringify(data));
 			$("#nowStatusName").text(data.nowStatusName);
-			$('#update_status_btn').val(data.nowStatusValue);
+			$("#update_status_btn").val(data.nowStatusValue);
 			$("#nextStatusName").text(data.nextStatusName);
 		}).fail(function(XMLHttpRequest, textStatus, errorThrown) {
 			alert("エラーが発生しました！");
