@@ -36,5 +36,17 @@ $(function() {
 	$("#q4_btn").on("click", function() { // ボタン押下時
 		$("#q4_btn").prop("disabled", true);
 	});
+	
+	// 問５
+	$("#q5_btn").on("click", function() { // ボタン押下時
+		var nameValue = $("#email").val();
+		if (nameValue == "") {
+			alert("メールアドレスを入力してください！");
+		} else {
+			// 入力されていたらq5_formというidがつけられたフォームをサブミットする(サーバーへ送る)
+			// 今回はaction属性が「#」なので同じ画面が表示される
+			$("#q5_form").submit();
+		}
+	});
 
 });
