@@ -1,11 +1,13 @@
 $(function() {
+  
+	
   // ［検索］ボタンクリックで検索開始
   $("#get_address_btn").on("click",function() {
     $.ajax({
         url: "http://zipcoda.net/api",
         dataType: "jsonp",
         data: { 
-          zipcode: $("#zipcode").val() 
+          zipcode: $("#zipcode").val()
         },
         async: true
     }).done(function(data) {

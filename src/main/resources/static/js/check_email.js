@@ -14,7 +14,7 @@ $(function() {
 			// コンソールに取得データを表示
 			console.log(data);
 			console.dir(JSON.stringify(data));
-			$("#duplicateMessage").html(data.duplicateMessage);
+			$("#duplicateMessage").text(data.duplicateMessage);
 		}).fail(function(XMLHttpRequest, textStatus, errorThrown) {
 			alert("エラーが発生しました！");
 			console.log("XMLHttpRequest : " + XMLHttpRequest.status);

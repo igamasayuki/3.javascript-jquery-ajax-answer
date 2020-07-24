@@ -1,10 +1,10 @@
 $(function() {
-	// 問１
+	// 演習１
 	$("#q1_btn").on("click", function(){
 		$("#q1").text("山田太郎");
 	});
 	
-	// 問２
+	// 演習２
 	$("#q2").css("color", "blue"); // 初期表示時は青
 	$("#q2_btn").on("click", function(){
 		var targetText = $("#q2").css("color");
@@ -15,7 +15,7 @@ $(function() {
 		}
 	});
 	
-	// 問３
+	// 演習３
 	$("#triathlon").hide(); //hide()関数でも非表示になる
 	$("#other").hide();
 
@@ -32,12 +32,12 @@ $(function() {
 		}
 	});
 	
-	// 問４
+	// 演習４
 	$("#q4_btn").on("click", function() { // ボタン押下時
 		$("#q4_btn").prop("disabled", true);
 	});
 	
-	// 問５
+	// 演習５
 	$("#q5_btn").on("click", function() { // ボタン押下時
 		var nameValue = $("#email").val();
 		if (nameValue == "") {

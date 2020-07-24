@@ -1,16 +1,16 @@
-// 問2 解答
-console.log("問2 解答");
+// 演習2 解答
+console.log("演習2 解答");
 console.log("伊賀将之");
 
-// 問3 解答
-console.log("問3 解答");
+// 演習3 解答
+console.log("演習3 解答");
 var lastName = "伊賀";
 var firstName = "将之"
 console.log(lastName);
 console.log(firstName);
 
-// 問4 解答
-console.log("問4 解答");
+// 演習4 解答
+console.log("演習4 解答");
 var age = 18;
 if(age < 20){
 	console.log("未成年です");
@@ -18,8 +18,8 @@ if(age < 20){
 	console.log("成人です");
 }
 
-// 問4-2 解答
-console.log("問4-2 解答");
+// 演習4-2 解答
+console.log("演習4-2 解答");
 var age = 4;
 if(0 <= age && age <= 4){
 	console.log("幼年期");
@@ -35,16 +35,16 @@ if(0 <= age && age <= 4){
 	console.log("高年期");
 }
 
-// 問5 解答
-console.log("問5 解答");
+// 演習5 解答
+console.log("演習5 解答");
 var answer = 0;
 for(var i = 1; i <= 10; i++){
 	answer += i;
 }
 console.log(answer);
 
-// 問5-2 解答
-console.log("問5-2 解答");
+// 演習5-2 解答
+console.log("演習5-2 解答");
 let answerLine = "";
 for(var i = 1; i <= 9; i++){
 	for(var j = 1; j <= 9; j++){
@@ -59,8 +59,8 @@ for(var i = 1; i <= 9; i++){
 }
 console.log(answerLine);
 
-// 問6 解答
-console.log("問6 解答");
+// 演習6 解答
+console.log("演習6 解答");
 var array = [1,2,3,4,5,6,7,8,9,10];
 // for文
 var answer = 0;
@@ -75,8 +75,8 @@ for(var number of array){
 }
 console.log("for-of文のanswer:" + answer);
 
-// 問6-2 解答
-console.log("問6-2 解答");
+// 演習6-2 解答
+console.log("演習6-2 解答");
 var array = [1,2,3,4,5,6,7,8,9,10];
 // for文
 for(var i = 0; i < 10; i++){
@@ -92,8 +92,8 @@ for(var number of array){
 	}
 }
 
-// 問7 解答
-console.log("問7 解答");
+// 演習7 解答
+console.log("演習7 解答");
 var capitalInfo = {
 	'日本':'東京',
 	'スリランカ':'スリジャヤワルダナプラコッテ',
@@ -104,16 +104,16 @@ console.log("タイの首都は" + capitalInfo['タイ'] + "です");
 capitalInfo['タイ'] = "バンコク";
 console.log("タイの首都は" + capitalInfo['タイ'] + "です");
 
-// 問8 解答
-console.log("問8 解答");
+// 演習8 解答
+console.log("演習8 解答");
 printName(); //関数宣言の前でも使用可能
 function printName(){
 	console.log('伊賀将之');
 }
 printName();
 
-// 問8-2 解答
-console.log("問8-2 解答");
+// 演習8-2 解答
+console.log("演習8-2 解答");
 function add(num1, num2){
 	return num1 + num2;
 }
@@ -131,16 +131,16 @@ console.log("5 - 3 = " + sub(5,3));
 console.log("5 * 3 = " + multi(5,3));
 console.log("5 / 3 = " + div(5,3));
 
-// 問9 解答
-console.log("問9 解答");
+// 演習9 解答
+console.log("演習9 解答");
 // printNameVariable(); //関数宣言の前だと使用不可能(巻き上げできないという)
 var printNameVariable = function() {
 	console.log("イガ");
 }
 printNameVariable();
 
-// 問9-2 解答
-console.log("問9-2 解答");
+// 演習9-2 解答
+console.log("演習9-2 解答");
 var addVariable = function(num1, num2) {
 	return num1 + num2;
 }
@@ -158,8 +158,8 @@ console.log("5 - 3 = " + subVariable(5,3));
 console.log("5 * 3 = " + multiVariable(5,3));
 console.log("5 / 3 = " + divVariable(5,3));
 
-// 問10 解答
-console.log("問10 解答");
+// 演習10 解答
+console.log("演習10 解答");
 var globalVal = 10; // ←グローバルスコープの変数
 function func1() {
     var localVal = 20; // ←ローカルスコープ(関数スコープ)の変数
@@ -168,11 +168,11 @@ function func1() {
 }
 func1();
 console.log("globalVal:" + globalVal); // 10
-console.log("localVal:" + localVal); // エラー
+// console.log("localVal:" + localVal); // エラー
 
 
-// 問11 解答
-console.log("問11 解答");
+// 演習11 解答
+console.log("演習11 解答");
 if (true) {
     var x = 5;
 }
