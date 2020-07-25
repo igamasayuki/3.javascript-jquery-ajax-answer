@@ -1,12 +1,13 @@
+'use strict';
 $(function() {
 	// 初期表示時は「入金前:0」にする
 	$("#nowStatusName").text("入金前");
 	$("#update_status_btn").val(0);
 	$("#nextStatusName").text("入金済");
-	
+
 	$("#update_status_btn").on("click", function() {
-		var hostUrl = "http://localhost:8080/updatestatus/update";
-		var previousStatusValue = $("#update_status_btn").val();
+		let hostUrl = "http://localhost:8080/updatestatus/update";
+		let previousStatusValue = $("#update_status_btn").val();
 		$.ajax({
 			url : hostUrl,
 			type : "POST",
@@ -14,7 +15,8 @@ $(function() {
 			data : {
 				previousStatusValue : previousStatusValue
 			},
-			async: true // 非同期で処理を行う
+			async : true
+		// 非同期で処理を行う
 		}).done(function(data) {
 			// コンソールに取得データを表示
 			console.log(data);
@@ -29,6 +31,5 @@ $(function() {
 			console.log("errorThrown    : " + errorThrown.message);
 		});
 	});
-	
-	
+
 });

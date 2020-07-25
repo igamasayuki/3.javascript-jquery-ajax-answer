@@ -1,6 +1,5 @@
+'use strict';
 $(function() {
-  
-	
   // ［検索］ボタンクリックで検索開始
   $("#get_address_btn").on("click",function() {
     $.ajax({

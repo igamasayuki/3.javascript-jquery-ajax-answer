@@ -1,6 +1,4 @@
-/**
- * 
- */
+'use strict';
 
 $(function(){
 	$("#address").on("click",function(){

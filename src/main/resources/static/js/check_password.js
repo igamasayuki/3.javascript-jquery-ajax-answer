@@ -1,16 +1,17 @@
+'use strict';
 $(function() {
 	$("#password").on("keyup", function() {
 		check_password();
 	});
-	
+
 	$("#confirmationPassword").on("keyup", function() {
 		check_password();
 	});
-	
-	function check_password(){
-		var hostUrl = "http://localhost:8080/checkpassword/check";
-		var inputPassword = $("#password").val();
-		var inputConfirmationPassword = $("#confirmationPassword").val();
+
+	function check_password() {
+		let hostUrl = "http://localhost:8080/checkpassword/check";
+		let inputPassword = $("#password").val();
+		let inputConfirmationPassword = $("#confirmationPassword").val();
 		$.ajax({
 			url : hostUrl,
 			type : "POST",
@@ -19,7 +20,8 @@ $(function() {
 				password : inputPassword,
 				confirmationPassword : inputConfirmationPassword
 			},
-			async: true // 非同期で処理を行う
+			async : true
+		// 非同期で処理を行う
 		}).done(function(data) {
 			// コンソールに取得データを表示
 			console.log(data);

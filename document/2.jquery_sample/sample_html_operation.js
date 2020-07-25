@@ -1,4 +1,6 @@
-imgRotate = 0; // サンプル2で使用グローバル変数(回転角度)
+'use strict';
+
+let imgRotate = 0; // サンプル2で使用グローバル変数(回転角度)
 $(function() {
 	// サンプル1(現在の日付をテキストボックスに入れる)
 	$("#sample1button").on("click", function() { // ボタン押下時

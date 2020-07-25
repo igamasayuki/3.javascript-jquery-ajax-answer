@@ -1,7 +1,8 @@
+'use strict';
 $(function() {
 	$("#email").on("keyup", function() {
-		var hostUrl = "http://localhost:8080/checkemail/check";
-		var inputEmail = $("#email").val();
+		let hostUrl = "http://localhost:8080/checkemail/check";
+		let inputEmail = $("#email").val();
 		$.ajax({
 			url : hostUrl,
 			type : "POST",
@@ -9,7 +10,8 @@ $(function() {
 			data : {
 				email : inputEmail
 			},
-			async: true // 非同期で処理を行う
+			async : true
+		// 非同期で処理を行う
 		}).done(function(data) {
 			// コンソールに取得データを表示
 			console.log(data);
