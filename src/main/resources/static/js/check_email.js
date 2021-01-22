@@ -1,12 +1,12 @@
 'use strict';
 $(function() {
-	$("#email").on("keyup", function() {
-		let hostUrl = "http://localhost:8080/checkemail/check";
-		let inputEmail = $("#email").val();
+	$(document).on('keyup', '#email', function () {
+		let hostUrl = 'http://localhost:8080/checkemail/check';
+		let inputEmail = $('#email').val();
 		$.ajax({
 			url : hostUrl,
-			type : "POST",
-			dataType : "json",
+			type : 'POST',
+			dataType : 'json',
 			data : {
 				email : inputEmail
 			},
@@ -16,12 +16,12 @@ $(function() {
 			// コンソールに取得データを表示
 			console.log(data);
 			console.dir(JSON.stringify(data));
-			$("#duplicateMessage").text(data.duplicateMessage);
+			$('#duplicateMessage').text(data.duplicateMessage);
 		}).fail(function(XMLHttpRequest, textStatus, errorThrown) {
-			alert("エラーが発生しました！");
-			console.log("XMLHttpRequest : " + XMLHttpRequest.status);
-			console.log("textStatus     : " + textStatus);
-			console.log("errorThrown    : " + errorThrown.message);
+			alert('エラーが発生しました！');
+			console.log('XMLHttpRequest : ' + XMLHttpRequest.status);
+			console.log('textStatus     : ' + textStatus);
+			console.log('errorThrown    : ' + errorThrown.message);
 		});
 	});
 });

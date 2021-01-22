@@ -1,21 +1,21 @@
 'use strict';
 $(function() {
-	$("#password").on("keyup", function() {
+	$(document).on('keyup', '#password', function () {
 		check_password();
 	});
 
-	$("#confirmationPassword").on("keyup", function() {
+	$(document).on('keyup', '#confirmationPassword', function () {
 		check_password();
 	});
 
 	function check_password() {
-		let hostUrl = "http://localhost:8080/checkpassword/check";
-		let inputPassword = $("#password").val();
-		let inputConfirmationPassword = $("#confirmationPassword").val();
+		let hostUrl = 'http://localhost:8080/checkpassword/check';
+		let inputPassword = $('#password').val();
+		let inputConfirmationPassword = $('#confirmationPassword').val();
 		$.ajax({
 			url : hostUrl,
-			type : "POST",
-			dataType : "json",
+			type : 'POST',
+			dataType : 'json',
 			data : {
 				password : inputPassword,
 				confirmationPassword : inputConfirmationPassword
@@ -26,13 +26,13 @@ $(function() {
 			// コンソールに取得データを表示
 			console.log(data);
 			console.dir(JSON.stringify(data));
-			$("#robustnessMessage").html(data.robustnessMessage);
-			$("#disagreementMessage").html(data.disagreementMessage);
+			$('#robustnessMessage').html(data.robustnessMessage);
+			$('#disagreementMessage').html(data.disagreementMessage);
 		}).fail(function(XMLHttpRequest, textStatus, errorThrown) {
-			alert("エラーが発生しました！");
-			console.log("XMLHttpRequest : " + XMLHttpRequest.status);
-			console.log("textStatus     : " + textStatus);
-			console.log("errorThrown    : " + errorThrown.message);
+			alert('エラーが発生しました！');
+			console.log('XMLHttpRequest : ' + XMLHttpRequest.status);
+			console.log('textStatus     : ' + textStatus);
+			console.log('errorThrown    : ' + errorThrown.message);
 		});
 	}
 });
