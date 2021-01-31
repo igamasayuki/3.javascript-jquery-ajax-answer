@@ -1,27 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
+
 <body>
-<span id="text">ここに文字がセットされます</span><br>
-名前：<input id="textbox" type="text"><br>
-<button type="button" id="set_btn">文字を設定</button>
-<button type="button" id="get_btn">文字を取得</button>
+	<span id="text">ここに文字がセットされます</span><br>
+	名前：<input id="textbox" type="text"><br>
+	<button type="button" id="set_btn">文字を設定</button>
+	<button type="button" id="get_btn">文字を取得</button>
 
-<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-'use strict';
-$(function() {
-	  $("#set_btn").on("click", function(){
-		  $("#text").text("html内のテキスト表示");
-		  $("#textbox").val("名前を入力してください");
-	  });
+	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		'use strict';
+		$(function () {
+			$(document).on('click', '#set_btn', function () {
+				$('#text').text('html内のテキスト表示');
+				$('#textbox').val('名前を入力してください');
+			});
 
-	  $("#get_btn").on("click", function(){
-	    alert( $("#text").text() );
-	    alert( $("#textbox").val() );
-	  });
-});
-</script>
+			$(document).on('click', '#get_btn', function () {
+				alert($('#text').text());
+				alert($('#textbox').val());
+			});
+		});
+	</script>
 </body>
+
 </html>
