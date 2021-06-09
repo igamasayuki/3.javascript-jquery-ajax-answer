@@ -4,14 +4,14 @@ console.log('伊賀将之');
 
 // 演習3 解答
 console.log('演習3 解答');
-var lastName = '伊賀';
-var firstName = '将之'
+let lastName = '伊賀';
+let firstName = '将之';
 console.log(lastName);
 console.log(firstName);
 
 // 演習4 解答
 console.log('演習4 解答');
-var age = 18;
+let age = 18;
 if(age < 20){
 	console.log('未成年です');
 } else {
@@ -20,7 +20,7 @@ if(age < 20){
 
 // 演習4-2 解答
 console.log('演習4-2 解答');
-var age = 4;
+let age = 4;
 if(0 <= age && age <= 4){
 	console.log('幼年期');
 } else if(5 <= age && age <= 14){
@@ -37,8 +37,8 @@ if(0 <= age && age <= 4){
 
 // 演習5 解答
 console.log('演習5 解答');
-var answer = 0;
-for(var i = 1; i <= 10; i++){
+let answer = 0;
+for(let i = 1; i <= 10; i++){
 	answer += i;
 }
 console.log(answer);
@@ -46,8 +46,8 @@ console.log(answer);
 // 演習5-2 解答
 console.log('演習5-2 解答');
 let answerLine = '';
-for(var i = 1; i <= 9; i++){
-	for(var j = 1; j <= 9; j++){
+for(let i = 1; i <= 9; i++){
+	for(let j = 1; j <= 9; j++){
 		let answer = i * j;
 		if(answer < 10){
 			answer = ' ' + answer;
@@ -61,32 +61,32 @@ console.log(answerLine);
 
 // 演習6 解答
 console.log('演習6 解答');
-var array = [1,2,3,4,5,6,7,8,9,10];
+let array = [1,2,3,4,5,6,7,8,9,10];
 // for文
-var answer = 0;
-for(var i = 0; i < 10; i++){
+let answer = 0;
+for(let i = 0; i < 10; i++){
 	answer += array[i];
 }
 console.log('for文のanswer:' + answer);
 // for-of文
-var answer = 0;
-for(var number of array){
+let answer = 0;
+for(let number of array){
 	answer += number;
 }
 console.log('for-of文のanswer:' + answer);
 
 // 演習6-2 解答
 console.log('演習6-2 解答');
-var array = [1,2,3,4,5,6,7,8,9,10];
+let array = [1,2,3,4,5,6,7,8,9,10];
 // for文
-for(var i = 0; i < 10; i++){
-	var number = array[i];
+for(let i = 0; i < 10; i++){
+	let number = array[i];
 	if(number % 2 == 1){
 		console.log(number);
 	}
 }
 // for-of文
-for(var number of array){
+for(let number of array){
 	if(number % 2 == 1){
 		console.log(number);
 	}
@@ -94,7 +94,7 @@ for(var number of array){
 
 // 演習7 解答
 console.log('演習7 解答');
-var capitalInfo = {
+let capitalInfo = {
 	'日本':'東京',
 	'スリランカ':'スリジャヤワルダナプラコッテ',
 	'タイ':'クルンテープ・マハーナコーン・アモーンラッタナコーシン・マヒンタラアユッタヤー・マハーディロッカポップ・ノッパラッターナラーチャタニーブリーロム・ウドンラーチャニウェットマハーサターン・アモーンラピーンアワターンサティット・サッカタットティヤウィサヌカムプラシット'
