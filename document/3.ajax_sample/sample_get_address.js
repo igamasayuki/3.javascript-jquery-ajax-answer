@@ -9,7 +9,7 @@ $(function() {
           zipcode: $('#zipcode').val()
         },
         async: true
-    }).done(function(data) {
+    }).done(function(data) {  // レスポンスデータがdataに入る
       // 検索成功時にはページに結果を反映
       // コンソールに取得データを表示
       console.log(data);
