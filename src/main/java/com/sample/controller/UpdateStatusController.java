@@ -1,13 +1,17 @@
-package com.sample;
+package com.sample.controller;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.sample.common.StatusEnum;
+import com.sample.form.UpdateStatusForm;
 
 @Controller
 @RequestMapping("/updatestatus")
@@ -23,7 +27,8 @@ public class UpdateStatusController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public Map<String, String> updates(int previousStatusValue) {
+	public Map<String, String> updates(@RequestBody UpdateStatusForm updateStatusForm) {
+		Integer previousStatusValue = updateStatusForm.getPreviousStatusValue();
 		Map<String, String> map = new HashMap<>();
 		// 前のステータス
 		StatusEnum previousStatusEnum = StatusEnum.of(previousStatusValue);

@@ -1,13 +1,16 @@
-package com.sample;
+package com.sample.controller;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.sample.form.CheckPasswordForm;
 
 @Controller
 @RequestMapping("/checkpassword")
@@ -23,7 +26,11 @@ public class CheckPasswordController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/check", method = RequestMethod.POST)
-	public Map<String, String> check(String password, String confirmationPassword) {
+	public Map<String, String> check(@RequestBody CheckPasswordForm checkPasswordForm) {
+		
+		String password = checkPasswordForm.getPassword();
+		String confirmationPassword = checkPasswordForm.getConfirmationPassword();
+		
 		Map<String, String> map = new HashMap<>();
 
 		// 8文字以上チェック

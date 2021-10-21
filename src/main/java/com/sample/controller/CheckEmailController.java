@@ -1,13 +1,16 @@
-package com.sample;
+package com.sample.controller;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.sample.form.CheckEmailForm;
 
 @Controller
 @RequestMapping("/checkemail")
@@ -23,15 +26,18 @@ public class CheckEmailController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/check", method = RequestMethod.POST)
-	public Map<String, String> check(String email) {
+	public Map<String, String> check(@RequestBody CheckEmailForm checkEmailForm) {
+		String email = checkEmailForm.getEmail();
+		System.out.println("サーバー側「入力されたemail」：" + email);
 		Map<String, String> map = new HashMap<>();
 		String duplicateMessage = null;
 		if ("iga@sample.com".equals(email)) {
-			duplicateMessage =  "「" + email + "」は既に登録されているメールアドレスです";
+			duplicateMessage = "「" + email + "」は既に登録されているメールアドレスです";
 		} else {
-			duplicateMessage =  "「" + email + "」は登録されていません";
+			duplicateMessage = "「" + email + "」は登録されていません";
 		}
 		map.put("duplicateMessage", duplicateMessage);
 		return map;
 	}
+	
 }

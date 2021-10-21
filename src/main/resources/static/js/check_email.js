@@ -1,8 +1,9 @@
 'use strict';
 $(function() {
 	$(document).on('keyup', '#email', function () {
-		let hostUrl = 'http://localhost:8080/checkemail/check';
+		let hostUrl = 'http://localhost:8080/ex-js-api/checkemailApi/check';
 		let inputEmail = $('#email').val();
+		console.log("入力された値:" + inputEmail);
 		$.ajax({
 			url : hostUrl,
 			type : 'POST',

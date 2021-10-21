@@ -1,24 +1,19 @@
 'use strict';
 $(function() {
-	$(document).on('keyup', '#password', function () {
-		check_password();
-	});
+	// 初期表示時は「入金前:0」にする
+	$('#nowStatusName').text('入金前');
+	$('#update_status_btn').val(0);
+	$('#nextStatusName').text('入金済');
 
-	$(document).on('keyup', '#confirmationPassword', function () {
-		check_password();
-	});
-
-	function check_password() {
-		let hostUrl = 'http://localhost:8080/ex-js-api/checkpassword/check';
-		let inputPassword = $('#password').val();
-		let inputConfirmationPassword = $('#confirmationPassword').val();
+	$(document).on('click', '#update_status_btn', function () {
+		let hostUrl = 'http://153.127.48.168:8080/ex-js-api/updatestatus/update';
+		let previousStatusValue = $('#update_status_btn').val();
 		$.ajax({
 			url : hostUrl,
 			type : 'POST',
 			dataType : 'json',
 			data : {
-				password : inputPassword,
-				confirmationPassword : inputConfirmationPassword
+				previousStatusValue : previousStatusValue
 			},
 			async : true
 		// 非同期で処理を行う
@@ -26,13 +21,15 @@ $(function() {
 			// コンソールに取得データを表示
 			console.log(data);
 			console.dir(JSON.stringify(data));
-			$('#robustnessMessage').html(data.robustnessMessage);
-			$('#disagreementMessage').html(data.disagreementMessage);
+			$('#nowStatusName').text(data.nowStatusName);
+			$('#update_status_btn').val(data.nowStatusValue);
+			$('#nextStatusName').text(data.nextStatusName);
 		}).fail(function(XMLHttpRequest, textStatus, errorThrown) {
 			alert('エラーが発生しました！');
 			console.log('XMLHttpRequest : ' + XMLHttpRequest.status);
 			console.log('textStatus     : ' + textStatus);
 			console.log('errorThrown    : ' + errorThrown.message);
 		});
-	}
+	});
+
 });

@@ -9,7 +9,7 @@ $(function() {
 	});
 
 	function check_password() {
-		let hostUrl = 'http://localhost:8080/ex-js-api/checkpassword/check';
+		let hostUrl = 'http://153.127.48.168:8080/ex-js-api/checkpassword/check';
 		let inputPassword = $('#password').val();
 		let inputConfirmationPassword = $('#confirmationPassword').val();
 		$.ajax({
