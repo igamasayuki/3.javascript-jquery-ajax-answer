@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,7 +25,7 @@ public class CheckEmailController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/check", method = RequestMethod.POST)
-	public Map<String, String> check(@RequestBody CheckEmailForm checkEmailForm) {
+	public Map<String, String> check(CheckEmailForm checkEmailForm) {
 		String email = checkEmailForm.getEmail();
 		System.out.println("サーバー側「入力されたemail」：" + email);
 		Map<String, String> map = new HashMap<>();
@@ -39,5 +38,5 @@ public class CheckEmailController {
 		map.put("duplicateMessage", duplicateMessage);
 		return map;
 	}
-	
+
 }

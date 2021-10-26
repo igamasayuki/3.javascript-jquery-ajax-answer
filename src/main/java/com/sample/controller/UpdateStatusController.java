@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,7 +26,7 @@ public class UpdateStatusController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public Map<String, String> updates(@RequestBody UpdateStatusForm updateStatusForm) {
+	public Map<String, String> updates(UpdateStatusForm updateStatusForm) {
 		Integer previousStatusValue = updateStatusForm.getPreviousStatusValue();
 		Map<String, String> map = new HashMap<>();
 		// 前のステータス

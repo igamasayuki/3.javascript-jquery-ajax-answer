@@ -1,7 +1,7 @@
 'use strict';
 $(function() {
 	$(document).on('keyup', '#email', function () {
-		let hostUrl = 'http://localhost:8080/ex-js-api/checkemailApi/check';
+		let hostUrl = 'http://localhost:8080/ex-js-api/checkemail/check';  // サーバーに上げるときはホスト名をサーバーのIPアドレスに変更する
 		let inputEmail = $('#email').val();
 		console.log("入力された値:" + inputEmail);
 		$.ajax({
