@@ -20,7 +20,7 @@ $(function () {
     let piza_num = $("#pizanum").val();
     let size_price = 0;
     let topping_price = 0;
-    if (size == "M") {
+    if (size === "M") {
       size_price = 1380;
       topping_price = 200 * topping_count;
     } else {

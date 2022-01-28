@@ -10,7 +10,7 @@ $(function () {
   $("#q2_btn").on("click", function () {
     let targetText = $("#q2").css("color");
     console.log(targetText);
-    if (targetText == "rgb(0, 0, 255)") {
+    if (targetText === "rgb(0, 0, 255)") {
       // 青なら赤へ、赤なら青へ
       $("#q2").css("color", "red");
     } else {
@@ -24,10 +24,10 @@ $(function () {
 
   $("#q3_select").on("change", function () {
     // 選択肢変更時
-    if ($("#q3_select").val() == "1") {
+    if ($("#q3_select").val() === "1") {
       $("#triathlon").show();
       $("#other").hide();
-    } else if ($("#q3_select").val() == "2") {
+    } else if ($("#q3_select").val() === "2") {
       $("#triathlon").hide();
       $("#other").show();
     } else {
@@ -46,7 +46,7 @@ $(function () {
   $("#q5_btn").on("click", function () {
     // ボタン押下時
     let nameValue = $("#email").val();
-    if (nameValue == "") {
+    if (nameValue === "") {
       alert("メールアドレスを入力してください！");
     } else {
       // 入力されていたらq5_formというidがつけられたフォームをサブミットする(サーバーへ送る)
