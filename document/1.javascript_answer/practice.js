@@ -11,8 +11,8 @@ console.log(firstName);
 
 // 演習4 解答
 console.log("演習4 解答");
-let age = 18;
-if (age < 20) {
+let myAge = 18;
+if (myAge < 20) {
   console.log("未成年です");
 } else {
   console.log("成人です");
@@ -63,30 +63,30 @@ console.log(answerLine);
 console.log("演習6 解答");
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // for文
-let answer = 0;
+let answer2 = 0;
 for (let i = 0; i < 10; i++) {
-  answer += array[i];
+  answer2 += array[i];
 }
-console.log("for文のanswer:" + answer);
+console.log("for文のanswer:" + answer2);
 // for-of文
-let answer = 0;
+let answer3 = 0;
 for (let number of array) {
-  answer += number;
+  answer3 += number;
 }
-console.log("for-of文のanswer:" + answer);
+console.log("for-of文のanswer:" + answer3);
 
 // 演習6-2 解答
 console.log("演習6-2 解答");
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // for文
 for (let i = 0; i < 10; i++) {
-  let number = array[i];
+  let number = array2[i];
   if (number % 2 === 1) {
     console.log(number);
   }
 }
 // for-of文
-for (let number of array) {
+for (let number of array2) {
   if (number % 2 === 1) {
     console.log(number);
   }
