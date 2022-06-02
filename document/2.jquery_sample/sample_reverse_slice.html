@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<!-- ヘッド要素 -->
-<meta charset="UTF-8">
-<title>タイトル</title>
-</head>
-<body>
-	<div class="aaa">
-	<p style="display: block;">1</p>
-	<p style="display: block;">2</p>
-	<p style="display: none;">3</p>
-	<p style="display: none;">4</p>
-	</div>
-	<button type="button">切り替え</button>
+  <head>
+    <!-- ヘッド要素 -->
+    <meta charset="UTF-8" />
+    <title>タイトル</title>
+  </head>
+  <body>
+    <div class="aaa">
+      <p style="display: block">1</p>
+      <p style="display: block">2</p>
+      <p style="display: none">3</p>
+      <p style="display: none">4</p>
+    </div>
+    <button type="button">切り替え</button>
 
-	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script>
-		'use strict';
-		$(function() {
-
-			$(document).on('click', 'button', function() { // ボタン押下時
-				let itemArray = $.makeArray($(".aaa p"));
-				$(".aaa p").css("display","none");
-				itemArray.reverse();
-				$(".aaa").html(itemArray);
-				$(".aaa p").slice(0,2).css("display","block");
-				/* $("p").toggle(); */
-				
-			});
-		});
-	</script>
-</body>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      "use strict";
+      $(function () {
+        $(document).on("click", "button", function () {
+          // ボタン押下時
+          let itemArray = $.makeArray($(".aaa p"));
+          $(".aaa p").css("display", "none");
+          itemArray.reverse();
+          $(".aaa").html(itemArray);
+          $(".aaa p").slice(0, 2).css("display", "block");
+          /* $("p").toggle(); */
+        });
+      });
+    </script>
+  </body>
 </html>

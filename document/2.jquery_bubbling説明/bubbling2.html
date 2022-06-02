@@ -19,51 +19,86 @@
 
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-      'use strict';
-      
-      $(function () {
+      "use strict";
 
-        $(window).on('click',function () {
+      $(function () {
+        $(window).on("click", function () {
           alert("windowオブジェクトの" + event.type + "イベントが発生しました");
         });
 
-        $(document).on('click',function () {
-          alert("documentオブジェクトの" + event.type + "イベントが発生しました");
+        $(document).on("click", function () {
+          alert(
+            "documentオブジェクトの" + event.type + "イベントが発生しました"
+          );
         });
 
-        $('html').on('click',function () {
-          alert($(this).get(0).tagName + "要素の" + event.type + "イベントが発生しました");
+        $("html").on("click", function () {
+          alert(
+            $(this).get(0).tagName +
+              "要素の" +
+              event.type +
+              "イベントが発生しました"
+          );
         });
 
-        $('body').on('click',function () {
-          alert($(this).get(0).tagName + "要素の" + event.type + "イベントが発生しました");
+        $("body").on("click", function () {
+          alert(
+            $(this).get(0).tagName +
+              "要素の" +
+              event.type +
+              "イベントが発生しました"
+          );
         });
 
-        $('table').on('click',function () {
-          alert($(this).get(0).tagName + "要素の" + event.type + "イベントが発生しました");
+        $("table").on("click", function () {
+          alert(
+            $(this).get(0).tagName +
+              "要素の" +
+              event.type +
+              "イベントが発生しました"
+          );
         });
 
-        $('tr').on('click',function () {
-          alert($(this).get(0).tagName + "要素の" + event.type + "イベントが発生しました");
+        $("tr").on("click", function () {
+          alert(
+            $(this).get(0).tagName +
+              "要素の" +
+              event.type +
+              "イベントが発生しました"
+          );
         });
 
-        $('td').on('click',function () {
-          alert($(this).get(0).tagName + "要素の" + event.type + "イベントが発生しました");
+        $("td").on("click", function () {
+          alert(
+            $(this).get(0).tagName +
+              "要素の" +
+              event.type +
+              "イベントが発生しました"
+          );
         });
 
-        $('div').on('click',function () {
-          alert($(this).get(0).tagName + "要素の" + event.type + "イベントが発生しました");
+        $("div").on("click", function () {
+          alert(
+            $(this).get(0).tagName +
+              "要素の" +
+              event.type +
+              "イベントが発生しました"
+          );
         });
 
         $("button").on("click", function () {
-          alert($(this).get(0).tagName + "要素の" + event.type + "イベントが発生しました");
+          alert(
+            $(this).get(0).tagName +
+              "要素の" +
+              event.type +
+              "イベントが発生しました"
+          );
         });
 
         // // 上記の一部をこのようにまとめて書くこともできます
         // $('html,body,table,tr,td,div,button').on('click',function () {
         //   alert($(this).get(0).tagName + "要素の" + event.type + "イベントが発生しました");
         // });
-
       });
     </script>
   </body>
