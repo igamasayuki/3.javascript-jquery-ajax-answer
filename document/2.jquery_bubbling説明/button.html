@@ -18,16 +18,14 @@
       $(function () {
         // click関数の利用
         // 動的に追加された(書き変わった)要素のイベントをひろうことができない
-        // $('button').click(function () {
-        //     $('.buttons-area').append('<button>追加されたボタン</button>');
+        // $("button").click(function () {
+        //   $(".buttons-area").append("<button>追加されたボタン</button>");
         // });
-
         // on関数の利用(セレクタに自分自身を指定するシンプルな使い方)
         // 動的に追加された(書き変わった)要素のイベントをひろうことができない
-        // $('button').on('click', function () {
-        //     $('.buttons-area').append('<button>追加されたボタン</button>');
+        // $("button").on("click", function () {
+        //   $(".buttons-area").append("<button>追加されたボタン</button>");
         // });
-
         // on関数の利用(セレクタに親を指定して、自分自身の指定はon関数の第２引数に書く方法)
         // 動的に追加された(書き変わった)要素のイベントをひろうことができる
         $(".buttons-area").on("click", "button", function () {

@@ -1,9 +1,10 @@
 "use strict";
 $(function () {
   // ［検索］ボタンクリックで検索開始
-  $(document).on("click", "#get_address_btn", function () {
+  $("#get_address_btn").on("click", function () {
     $.ajax({
-      url: "http://zipcoda.net/api",
+      url: "https://zipcoda.net/api",
+      type: "GET",
       dataType: "jsonp",
       data: {
         zipcode: $("#zipcode").val(),
