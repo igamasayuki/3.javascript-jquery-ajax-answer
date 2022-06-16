@@ -23,7 +23,7 @@ public class UpdateStatusController {
 	public String index() {
 		return "update_status";
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public Map<String, String> updates(UpdateStatusForm updateStatusForm) {
@@ -35,12 +35,12 @@ public class UpdateStatusController {
 		StatusEnum nowStatusEnum = StatusEnum.of(previousStatusEnum.getNextStatusValue());
 		// 次のステータス
 		StatusEnum nextStatusEnum = StatusEnum.of(nowStatusEnum.getNextStatusValue());
-		
+
 		map.put("nowStatusName", nowStatusEnum.getStatusName());
 		map.put("nowStatusValue", String.valueOf(nowStatusEnum.getStatusValue()));
 		map.put("nextStatusName", nextStatusEnum.getStatusName());
-		
+
 		return map;
 	}
-	
+
 }

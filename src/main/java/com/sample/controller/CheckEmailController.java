@@ -22,7 +22,7 @@ public class CheckEmailController {
 	public String index() {
 		return "input_email";
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value = "/check", method = RequestMethod.POST)
 	public Map<String, String> check(CheckEmailForm checkEmailForm) {

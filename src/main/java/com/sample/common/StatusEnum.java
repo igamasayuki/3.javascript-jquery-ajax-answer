@@ -8,10 +8,7 @@ package com.sample.common;
  */
 public enum StatusEnum {
 
-	NOT_PAYMENT(0, "入金前", 1)
-	, DEPOSITED(1, "入金済", 2)
-	, DELIVERED(2, "配送済", 3)
-	, COMPLETE(3, "完了", 0);
+	NOT_PAYMENT(0, "入金前", 1), DEPOSITED(1, "入金済", 2), DELIVERED(2, "配送済", 3), COMPLETE(3, "完了", 0);
 
 	// 定数に含めるフィールド、コンストラクタ、メソッドを定義
 	/** 現在のステータス */

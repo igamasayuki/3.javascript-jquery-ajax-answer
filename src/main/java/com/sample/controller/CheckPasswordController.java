@@ -22,14 +22,14 @@ public class CheckPasswordController {
 	public String index() {
 		return "input_password";
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value = "/check", method = RequestMethod.POST)
 	public Map<String, String> check(CheckPasswordForm checkPasswordForm) {
-		
+
 		String password = checkPasswordForm.getPassword();
 		String confirmationPassword = checkPasswordForm.getConfirmationPassword();
-		
+
 		Map<String, String> map = new HashMap<>();
 
 		// 8文字以上チェック
@@ -50,10 +50,10 @@ public class CheckPasswordController {
 			disagreementMessage = "パスワードが一致していません";
 		}
 		map.put("disagreementMessage", disagreementMessage);
-		
+
 		System.out.println(password + ":" + confirmationPassword);
-		
+
 		return map;
 	}
-	
+
 }
