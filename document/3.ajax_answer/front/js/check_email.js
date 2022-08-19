@@ -1,6 +1,6 @@
 "use strict";
 $(function () {
-  $(document).on("keyup", "#email", function () {
+  $("#email").on("keyup", function () {
     let hostUrl = "http://153.127.48.168:8080/ex-js-api/checkemail/check";
     let inputEmail = $("#email").val();
     $.ajax({

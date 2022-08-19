@@ -1,10 +1,10 @@
 "use strict";
 $(function () {
-  $(document).on("keyup", "#password", function () {
+  $("#password").on("keyup", function () {
     check_password();
   });
 
-  $(document).on("keyup", "#confirmationPassword", function () {
+  $("#confirmationPassword").on("keyup", function () {
     check_password();
   });
 

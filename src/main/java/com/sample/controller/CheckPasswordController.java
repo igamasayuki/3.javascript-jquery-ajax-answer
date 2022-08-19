@@ -26,7 +26,7 @@ public class CheckPasswordController {
 	}
 
 	@ResponseBody
-	@PostMapping(value = "/check")
+	@PostMapping("/check")
 	public Map<String, String> check(CheckPasswordForm checkPasswordForm) {
 
 		String password = checkPasswordForm.getPassword();

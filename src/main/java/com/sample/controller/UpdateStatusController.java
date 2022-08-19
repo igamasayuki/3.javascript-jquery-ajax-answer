@@ -27,7 +27,7 @@ public class UpdateStatusController {
 	}
 
 	@ResponseBody
-	@PostMapping(value = "/update")
+	@PostMapping("/update")
 	public Map<String, String> updates(UpdateStatusForm updateStatusForm) {
 		Integer previousStatusValue = updateStatusForm.getPreviousStatusValue();
 		Map<String, String> map = new HashMap<>();

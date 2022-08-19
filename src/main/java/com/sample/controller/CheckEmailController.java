@@ -26,7 +26,7 @@ public class CheckEmailController {
 	}
 
 	@ResponseBody
-	@PostMapping(value = "/check")
+	@PostMapping("/check")
 	public Map<String, String> check(CheckEmailForm checkEmailForm) {
 		String email = checkEmailForm.getEmail();
 		System.out.println("サーバー側「入力されたemail」：" + email);
