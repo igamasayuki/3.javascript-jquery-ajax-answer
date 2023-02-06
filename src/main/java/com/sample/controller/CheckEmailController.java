@@ -40,5 +40,5 @@ public class CheckEmailController {
 		map.put("duplicateMessage", duplicateMessage);
 		return map;
 	}
-
+	
 }

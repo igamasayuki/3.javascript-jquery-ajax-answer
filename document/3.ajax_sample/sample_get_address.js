@@ -5,7 +5,7 @@ $(function () {
     $.ajax({
       url: "https://zipcoda.net/api",
       type: "GET",
-      dataType: "jsonp",
+      dataType: "json",
       data: {
         zipcode: $("#zipcode").val(),
       },
