@@ -1,4 +1,4 @@
-package com.sample.controller;
+package com.example.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.sample.common.StatusEnum;
-import com.sample.form.UpdateStatusForm;
+import com.example.common.StatusEnum;
+import com.example.form.UpdateStatusForm;
 
 @Controller
 @RequestMapping("/updatestatus")

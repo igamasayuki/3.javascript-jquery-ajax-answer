@@ -1,4 +1,4 @@
-package com.sample.form;
+package com.example.form;
 
 public class UpdateStatusForm {
 	// 前のステータス

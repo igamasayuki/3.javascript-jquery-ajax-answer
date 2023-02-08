@@ -1,4 +1,4 @@
-package com.sample.controller;
+package com.example.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.sample.form.CheckPasswordForm;
+import com.example.form.CheckPasswordForm;
 
 @Controller
 @RequestMapping("/checkpassword")

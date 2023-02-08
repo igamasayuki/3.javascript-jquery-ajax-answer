@@ -1,4 +1,4 @@
-package com.sample.common;
+package com.example.common;
 
 /**
  * ステータスを表すenum.
