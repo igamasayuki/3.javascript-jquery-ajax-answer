@@ -1,5 +1,6 @@
 "use strict";
 $(function () {
+//  $("#email").on("blur", function () {
   $("#email").on("keyup", function () {
     let hostUrl = "http://localhost:8080/ex-js-api/checkemail/check"; // サーバーに上げるときはホスト名をサーバーのIPアドレスに変更する
     let inputEmail = $("#email").val();
