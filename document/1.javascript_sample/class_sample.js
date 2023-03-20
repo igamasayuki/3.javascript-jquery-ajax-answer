@@ -1,4 +1,4 @@
-"use strict;";
+"use strict";
 
 class Car {
   // コンストラクター
@@ -16,10 +16,10 @@ class Car {
 
 const estima = new Car(100, "エスティマ");
 
-console.log(estima.speed);
-console.log(estima.name);
+console.log(estima.speed); // 100
+console.log(estima.name); // エスティマ
 
-estima.stepOnAccele();
+estima.stepOnAccele(); // スピードが110になりました
 
 // カプセル化の例
 // class Car {

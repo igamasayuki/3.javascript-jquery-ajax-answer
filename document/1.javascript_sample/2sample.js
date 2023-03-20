@@ -52,10 +52,3 @@ function sample4() {
 function sample5(buttonObj) {
   buttonObj.disabled = "disabled";
 }
-
-// サンプル6(ダミーフォームを作りボタンを横に並べる)
-function sample6() {
-  alert("投稿ではなく削除のダミーフォームをサブミット！");
-  // sample6Formという名前がつけられたフォームをサブミットする(サーバーへ送る)
-  document.sample6Form.submit();
-}

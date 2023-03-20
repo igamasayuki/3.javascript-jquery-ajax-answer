@@ -22,6 +22,19 @@ function multi(num1, num2) {
 function div(num1, num2) {
   return num1 / num2;
 }
+// アロー関数
+// const add = (num1, num2) => {
+//   return num1 + num2;
+// };
+// const sub = (num1, num2) => {
+//   return num1 - num2;
+// };
+// const multi = (num1, num2) => {
+//   return num1 * num2;
+// };
+// const div = (num1, num2) => {
+//   return num1 / num2;
+// };
 console.log("5 + 3 = " + add(5, 3));
 console.log("5 - 3 = " + sub(5, 3));
 console.log("5 * 3 = " + multi(5, 3));
@@ -30,23 +43,23 @@ console.log("5 / 3 = " + div(5, 3));
 // 演習9 解答
 console.log("演習9 解答");
 // printNameVariable(); //関数宣言の前だと使用不可能(巻き上げできないという)
-let printNameVariable = function () {
+const printNameVariable = () => {
   console.log("イガ");
 };
 printNameVariable();
 
 // 演習9-2 解答
 console.log("演習9-2 解答");
-let addVariable = function (num1, num2) {
+const addVariable = (num1, num2) => {
   return num1 + num2;
 };
-let subVariable = function (num1, num2) {
+const subVariable = (num1, num2) => {
   return num1 - num2;
 };
-let multiVariable = function (num1, num2) {
+const multiVariable = (num1, num2) => {
   return num1 * num2;
 };
-let divVariable = function (num1, num2) {
+const divVariable = (num1, num2) => {
   return num1 / num2;
 };
 console.log("5 + 3 = " + addVariable(5, 3));
