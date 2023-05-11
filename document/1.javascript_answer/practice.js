@@ -93,6 +93,16 @@ for (const number of array2) {
     console.log(number);
   }
 }
+// filterメソッド
+const results = array2.filter((number) => number % 2 === 1);
+console.log(results);
+
+// 演習6-3 解答
+console.log("演習6-3 解答");
+const array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const number = array3.find((number) => number === 7);
+console.log(number);
 
 // 演習7 解答
 console.log("演習7 解答");

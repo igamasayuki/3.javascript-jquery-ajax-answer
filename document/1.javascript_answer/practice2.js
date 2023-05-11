@@ -89,3 +89,91 @@ if (true) {
   let y = 5;
 }
 //console.log(y); // ReferenceErrorになる
+
+// 演習12 解答
+console.log("演習12 解答");
+function calcTotal(...args) {
+  let total = 0;
+  for (const arg of args) {
+    total += arg;
+  }
+  return total;
+}
+// アロー関数
+// const calcTotal = (...args) => {
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// };
+
+console.log(calcTotal(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+// 演習13 解答
+console.log("演習13 解答");
+const message = "I have a dream today";
+const count = message.length;
+console.log(count + "文字です");
+
+// 演習14 解答
+console.log("演習14 解答");
+
+const emptyCharacter = "";
+if (emptyCharacter.length === 0) {
+  console.log("空文字です");
+} else {
+  console.log("空文字ではありません");
+}
+
+// 演習15 解答
+console.log("演習15 解答");
+const message2 = "I have a dream today";
+const count2 = message.indexOf("a");
+console.log("最初のaは" + count2 + "番目です");
+
+// 演習16 解答
+console.log("演習16 解答");
+
+const message3 = "I have a dream today";
+const prefix = "I have";
+const partial = "dream";
+const backward = "today";
+
+if (message3.startsWith(prefix)) {
+  console.log(prefix + "は前方一致しました");
+} else {
+  console.log(prefix + "は前方一致しませんでした");
+}
+
+if (message3.includes(partial)) {
+  console.log(partial + "は部分一致しました");
+} else {
+  console.log(partial + "は部分一致しませんでした");
+}
+
+if (message3.endsWith(backward)) {
+  console.log(backward + "は後方一致しました");
+} else {
+  console.log(backward + "は後方一致しませんでした");
+}
+
+// 演習17 解答
+console.log("演習17 解答");
+const message4 = "I have a apple";
+const message5 = "I have an apple";
+if (message4 === message5) {
+  console.log("文字列が同じです");
+} else {
+  console.log("文字列が同じではありません");
+}
+
+// 演習18 解答
+console.log("演習18 解答");
+const bigNumber =
+  "阿僧祇(あそうぎ):那由他(なゆた):不可思議(ふかしぎ):無量大数(むりょうたいすう)";
+const units = bigNumber.split(":");
+
+for (const unit of units) {
+  console.log(unit);
+}
