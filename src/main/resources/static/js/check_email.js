@@ -2,8 +2,8 @@
 $(function () {
 //  $("#email").on("blur", function () {
   $("#email").on("keyup", function () {
-    let hostUrl = "http://localhost:8080/ex-js-api/checkemail/check"; // サーバーに上げるときはホスト名をサーバーのIPアドレスに変更する
-    let inputEmail = $("#email").val();
+    const hostUrl = "http://localhost:8080/ex-js-api/checkemail/check"; // サーバーに上げるときはホスト名をサーバーのIPアドレスに変更する
+    const inputEmail = $("#email").val();
     console.log("入力された値:" + inputEmail);
     $.ajax({
       url: hostUrl,

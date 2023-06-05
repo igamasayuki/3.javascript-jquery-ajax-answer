@@ -9,9 +9,9 @@ $(function () {
   });
 
   function check_password() {
-    let hostUrl = "http://localhost:8080/ex-js-api/checkpassword/check"; // サーバーに上げるときはホスト名をサーバーのIPアドレスに変更する
-    let inputPassword = $("#password").val();
-    let inputConfirmationPassword = $("#confirmationPassword").val();
+    const hostUrl = "http://localhost:8080/ex-js-api/checkpassword/check"; // サーバーに上げるときはホスト名をサーバーのIPアドレスに変更する
+    const inputPassword = $("#password").val();
+    const inputConfirmationPassword = $("#confirmationPassword").val();
     $.ajax({
       url: hostUrl,
       type: "POST",
