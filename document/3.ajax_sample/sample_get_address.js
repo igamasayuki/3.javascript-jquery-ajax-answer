@@ -1,6 +1,6 @@
 "use strict";
 $(function () {
-  // ［検索］ボタンクリックで検索開始
+  // ［住所取得］ボタンクリックで非同期処理開始
   $("#get_address_btn").on("click", function () {
     $.ajax({
       url: "https://zipcoda.net/api",
