@@ -177,3 +177,37 @@ const units = bigNumber.split(":");
 for (const unit of units) {
   console.log(unit);
 }
+
+// 演習19 解答
+class Student {
+  constructor() {
+    this.energy = 50;
+  }
+
+  sleep() {
+    this.energy += 50;
+    if (this.energy >= 100) {
+      this.energy = 100;
+    }
+    console.log(`寝ました。エネルギーが${this.energy}になりました。`);
+    if (this.energy === 100) {
+      console.log("フルパワー");
+    }
+  }
+  study() {
+    this.energy -= 30;
+    if (this.energy <= 0) {
+      this.energy = 0;
+    }
+    console.log(`勉強しました。エネルギーが${this.energy}になりました。`);
+    if (this.energy === 0) {
+      console.log("寝てください");
+    }
+  }
+}
+
+const student = new Student();
+student.study();
+student.study();
+student.sleep();
+student.sleep();
