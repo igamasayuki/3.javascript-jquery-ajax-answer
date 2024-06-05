@@ -2,7 +2,8 @@
 
 // サンプル1(現在の日付をテキストボックスに入れる)
 function sample1() {
-  document.sample1Form.nowText.value = new Date();
+  window.document.sample1Form.nowText.value = new Date();
+  //window.document.getElementById("nowText").value = new Date(); // 対象要素をIDで指定
 }
 
 // サンプル2(名前を表示させる)
