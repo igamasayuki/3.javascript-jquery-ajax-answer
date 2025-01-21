@@ -104,6 +104,13 @@ const array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const number = array3.find((number) => number === 7);
 console.log(number);
 
+// 演習6-4 解答
+console.log("演習6-4 解答");
+const array4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const results2 = array4.map((number) => number * 2);
+console.log(results2);
+
+
 // 演習7 解答
 console.log("演習7 解答");
 const capitalInfo = {
