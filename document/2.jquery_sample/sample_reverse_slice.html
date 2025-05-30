@@ -14,11 +14,11 @@
     </div>
     <button type="button">切り替え</button>
 
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
       "use strict";
-      $(function () {
-        $(document).on("click", "button", function () {
+      $(() => {
+        $(document).on("click", "button", () => {
           // ボタン押下時
           let itemArray = $.makeArray($(".aaa p"));
           $(".aaa p").css("display", "none");

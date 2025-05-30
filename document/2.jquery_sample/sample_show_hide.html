@@ -11,14 +11,14 @@
     <button type="button" id="show_btn">表示</button>
     <button type="button" id="hide_btn">非表示</button>
 
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
       "use strict";
-      $(function () {
-        $(document).on("click", "#show_btn", function () {
+      $(() => {
+        $(document).on("click", "#show_btn", () => {
           $("#text").show();
         });
-        $(document).on("click", "#hide_btn", function () {
+        $(document).on("click", "#hide_btn", () => {
           $("#text").hide();
         });
       });
