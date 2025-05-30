@@ -1,6 +1,6 @@
 "use strict";
-$(function () {
-  $("#email").on("keyup", function () {
+$(() => {
+  $("#email").on("keyup", () => {
     let hostUrl = "http://153.127.48.168:8080/ex-js-api/checkemail/check";
     let inputEmail = $("#email").val();
     $.ajax({
@@ -13,13 +13,13 @@ $(function () {
       async: true,
       // 非同期で処理を行う
     })
-      .done(function (data) {
+      .done((data) => {
         // コンソールに取得データを表示
         console.log(data);
         console.dir(JSON.stringify(data));
         $("#duplicateMessage").text(data.duplicateMessage);
       })
-      .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+      .fail((XMLHttpRequest, textStatus, errorThrown) => {
         alert("エラーが発生しました！");
         console.log("XMLHttpRequest : " + XMLHttpRequest.status);
         console.log("textStatus     : " + textStatus);

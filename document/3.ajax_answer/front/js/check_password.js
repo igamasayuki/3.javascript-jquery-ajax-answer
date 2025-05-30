@@ -1,10 +1,10 @@
 "use strict";
-$(function () {
-  $("#password").on("keyup", function () {
+$(() => {
+  $("#password").on("keyup", () => {
     check_password();
   });
 
-  $("#confirmationPassword").on("keyup", function () {
+  $("#confirmationPassword").on("keyup", () => {
     check_password();
   });
 
@@ -23,14 +23,14 @@ $(function () {
       async: true,
       // 非同期で処理を行う
     })
-      .done(function (data) {
+      .done((data) => {
         // コンソールに取得データを表示
         console.log(data);
         console.dir(JSON.stringify(data));
         $("#robustnessMessage").text(data.robustnessMessage);
         $("#disagreementMessage").text(data.disagreementMessage);
       })
-      .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+      .fail((XMLHttpRequest, textStatus, errorThrown) => {
         alert("エラーが発生しました！");
         console.log("XMLHttpRequest : " + XMLHttpRequest.status);
         console.log("textStatus     : " + textStatus);

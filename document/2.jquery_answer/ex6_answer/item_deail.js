@@ -1,15 +1,15 @@
 "use strict";
-$(function () {
+$(() => {
   calc_price();
-  $(".size").on("change", function () {
+  $(".size").on("change", () => {
     calc_price();
   });
 
-  $(".checkbox").on("change", function () {
+  $(".checkbox").on("change", () => {
     calc_price();
   });
 
-  $("#pizanum").on("change", function () {
+  $("#pizanum").on("change", () => {
     calc_price();
   });
 
