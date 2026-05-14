@@ -1,3 +1,2 @@
 server:
-  servlet:
-    context-path: /ex-js-api
+  port: ${PORT:8080}

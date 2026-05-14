@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.form.CheckEmailForm;
 
 @Controller
-@RequestMapping("/checkemail")
+@RequestMapping("/ex-js-api/checkemail")
 //CrossOrigin対応(異なるサーバーからの呼び出しを許可)
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
 		RequestMethod.DELETE })

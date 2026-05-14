@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.form.CheckPasswordForm;
 
 @Controller
-@RequestMapping("/checkpassword")
+@RequestMapping("/ex-js-api/checkpassword")
 //CrossOrigin対応(異なるサーバーからの呼び出しを許可)
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
 		RequestMethod.DELETE })
