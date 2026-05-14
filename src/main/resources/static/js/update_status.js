@@ -6,7 +6,7 @@ $(function () {
   $("#nextStatusName").text("入金済");
 
   $("#update_status_btn").on("click", function () {
-    const hostUrl = "http://localhost:8080/ex-js-api/updatestatus/update"; // サーバーに上げるときはホスト名をサーバーのIPアドレスに変更する
+    const hostUrl = "/updatestatus/update";
     const previousStatusValue = $("#update_status_btn").val();
     $.ajax({
       url: hostUrl,

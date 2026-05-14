@@ -1,7 +1,7 @@
 "use strict";
 $(function () {
   $("#button").on("click", function () {
-    const hostUrl = "http://153.127.48.168:8080/ex-emp-api/employee/employees";
+    const hostUrl = "/employee/employees";
     $.ajax({
       url: hostUrl,
       type: "GET",
@@ -17,7 +17,7 @@ $(function () {
           // 検索された従業員の数だけテーブルの行を追加する
           $("#employeeList").append(
             `<tr><td>${employee.id}</td>` +
-              `<td><img width="30px" height="50px" src="http://153.127.48.168:8080/ex-emp-api/img/${employee.image}"/></td>` +
+              `<td><img width="30px" height="50px" src="/img/${employee.image}"/></td>` +
               `<td>${employee.name}</td>` +
               `<td>${employee.hireDate}</td>` +
               `</tr>`
