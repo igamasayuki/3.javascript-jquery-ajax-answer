@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.example.form.UpdateStatusForm;
 
 @Controller
-@RequestMapping("/ex-js-api/updatestatus")
+@RequestMapping("/updatestatus")
 //CrossOrigin対応(異なるサーバーからの呼び出しを許可)
 @CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
 		RequestMethod.DELETE })
