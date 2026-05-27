@@ -65,10 +65,7 @@ public class EmployeeController {
 		employeeData.put("totalEmployeeCount", employees.size());
 		employeeData.put("employees", employees);
 
-		Map<String, Object> response = new HashMap<>();
-		response.put("data", employeeData);
-
-		return response;
+		return employeeData;
 	}
 
 	private Map<String, Object> createEmployee(int id, String name, String image, String gender,
