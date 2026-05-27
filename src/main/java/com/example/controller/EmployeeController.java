@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -61,7 +61,7 @@ public class EmployeeController {
 				"yumi.matsumoto@sample.com", "100-1001", "北海道札幌市10-10-10", "090-1000-1000", 230000,
 				"松本由美さんは人事・採用業務を担当し、優秀な人材の確保に努めています。", 0));
 
-		Map<String, Object> employeeData = new HashMap<>();
+		Map<String, Object> employeeData = new LinkedHashMap<>();
 		employeeData.put("totalEmployeeCount", employees.size());
 		employeeData.put("employees", employees);
 
@@ -71,7 +71,7 @@ public class EmployeeController {
 	private Map<String, Object> createEmployee(int id, String name, String image, String gender,
 			String hireDate, String mailAddress, String zipCode, String address,
 			String telephone, int salary, String characteristics, int dependentsCount) {
-		Map<String, Object> employee = new HashMap<>();
+		Map<String, Object> employee = new LinkedHashMap<>();
 		employee.put("id", id);
 		employee.put("name", name);
 		employee.put("image", image);
