@@ -3,7 +3,7 @@ $(() => {
   // ［住所取得］ボタンクリックで非同期処理開始
   $("#get_address_btn").on("click", () => {
     $.ajax({
-      url: "https://zipcoda.net/api",
+      url: "https://zipcoda.net/api/",
       type: "GET",
       dataType: "json",
       data: {

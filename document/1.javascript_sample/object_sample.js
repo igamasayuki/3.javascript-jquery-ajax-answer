@@ -14,7 +14,7 @@ const human = {
 // プロパティへのアクセス
 console.log(human["firstName"]); // Masayuki ※keyはダブルorシングルクウォート必須
 console.log(human.lastName); // Iga
-console.log(human[1]); // first // 数字がkeyの場合
+console.log(human[1]); // first // 数字がkeyの場合※keyはダブルorシングルクウォートありでもなしでもアクセス可能
 // console.log(human.1); // エラー
 
 // メソッドの呼び出し
