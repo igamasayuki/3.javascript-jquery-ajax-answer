@@ -5,7 +5,7 @@ $(() => {
   $("#update_status_btn").val(0);
   $("#nextStatusName").text("入金済");
 
-  $("#update_status_btn").on("click", function () {
+  $("#update_status_btn").on("click", () => {
     const hostUrl = "/updatestatus/update";
     const previousStatusValue = $("#update_status_btn").val();
     $.ajax({

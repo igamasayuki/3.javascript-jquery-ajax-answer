@@ -1,13 +1,13 @@
 "use strict";
 $(() => {
   // 演習１
-  $("#q1_btn").on("click", function () {
+  $("#q1_btn").on("click", () => {
     $("#q1").text("山田太郎");
   });
 
   // 演習２
   $("#q2").css("color", "blue"); // 初期表示時は青
-  $("#q2_btn").on("click", function () {
+  $("#q2_btn").on("click", () => {
     let targetText = $("#q2").css("color");
     console.log(targetText);
     if (targetText === "rgb(0, 0, 255)") {
@@ -22,7 +22,7 @@ $(() => {
   $("#triathlon").hide(); // hide()関数でも非表示になる
   $("#other").hide();
 
-  $("#q3_select").on("change", function () {
+  $("#q3_select").on("change", () => {
     // 選択肢変更時
     if ($("#q3_select").val() === "1") {
       $("#triathlon").show();
@@ -37,13 +37,13 @@ $(() => {
   });
 
   // 演習４
-  $("#q4_btn").on("click", function () {
+  $("#q4_btn").on("click", () => {
     // ボタン押下時
     $("#q4_btn").prop("disabled", true);
   });
 
   // 演習５
-  $("#q5_btn").on("click", function () {
+  $("#q5_btn").on("click", () => {
     // ボタン押下時
     let nameValue = $("#email").val();
     if (nameValue === "") {

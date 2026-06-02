@@ -1,7 +1,7 @@
 "use strict";
 $(() => {
-//  $("#email").on("blur", function () {
-  $("#email").on("keyup", function () {
+//  $("#email").on("blur", () => {
+  $("#email").on("keyup", () => {
     const hostUrl = "/checkemail/check";
     const inputEmail = $("#email").val();
     console.log("入力された値:" + inputEmail);

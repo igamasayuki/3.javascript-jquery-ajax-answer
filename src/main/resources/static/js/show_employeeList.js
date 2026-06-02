@@ -1,6 +1,6 @@
 "use strict";
 $(() => {
-  $("#button").on("click", function () {
+  $("#button").on("click", () => {
     const hostUrl = "/employee/employees";
     $.ajax({
       url: hostUrl,
