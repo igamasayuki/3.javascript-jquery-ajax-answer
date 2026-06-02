@@ -1,5 +1,5 @@
 "use strict";
-$(function () {
+$(() => {
   $("#password").on("keyup", function () {
     check_password();
   });

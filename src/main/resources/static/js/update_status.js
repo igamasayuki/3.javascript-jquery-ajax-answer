@@ -1,5 +1,5 @@
 "use strict";
-$(function () {
+$(() => {
   // 初期表示時は「入金前:0」にする
   $("#nowStatusName").text("入金前");
   $("#update_status_btn").val(0);

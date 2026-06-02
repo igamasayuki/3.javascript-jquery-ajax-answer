@@ -1,5 +1,5 @@
 "use strict";
-$(function () {
+$(() => {
   $("#button").on("click", function () {
     const hostUrl = "/employee/employees";
     $.ajax({

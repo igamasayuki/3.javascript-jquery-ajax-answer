@@ -1,5 +1,5 @@
 "use strict";
-$(function () {
+$(() => {
 //  $("#email").on("blur", function () {
   $("#email").on("keyup", function () {
     const hostUrl = "/checkemail/check";

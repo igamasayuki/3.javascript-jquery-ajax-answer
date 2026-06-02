@@ -1,5 +1,5 @@
 "use strict";
-$(function () {
+$(() => {
   // 演習１
   $("#q1_btn").on("click", function () {
     $("#q1").text("山田太郎");
